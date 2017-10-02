@@ -1,0 +1,522 @@
+.spotify {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: linear-gradient(to bottom, hsl(0, 90%, 20%), hsl(0, 90%, 10%), hsl(0, 90%, 5%));
+  transform-origin: center;
+  transform: scale(0);
+  border-radius: 50%;
+  animation: showBackground 0.5s ease forwards;
+}
+@keyframes showBackground {
+  0% {
+    transform: scale(0);
+    border-radius: 50%;
+  }
+  100% {
+    transform: scale(1);
+    border-radius: 0;
+  }
+}
+
+
+
+
+
+/*****************************\
+  $SPOTIFY HEADER
+\*****************************/
+.spotify__header {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+  .spotify__header__dropDownButton {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+    .spotify__header__dropDownButton__svg {
+      width: 15px;
+      height: 10px;
+    }
+      .dropDownBottonPath {
+        stroke-dasharray: 50;
+        stroke-dashoffset: 50;
+        animation: showDropDownButton 0.8s 2s ease forwards;
+      }
+      @keyframes showDropDownButton {
+        0% {
+          stroke-dashoffset: 50;
+        }
+        100% {
+          stroke-dashoffset: 0;
+        }
+      }
+  .spotify__header__player {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+    .spotify__header__player--name {
+      margin: 0;
+      padding: 0;
+      color: #FFF;
+      font-size: 0.6em;
+      text-align: center;
+      opacity: 0;
+      animation: showPlayerName 0.3s 1.7s ease forwards;
+    }
+    @keyframes showPlayerName {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  .spotify__header__menu {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+    .spotify__header__menu__svg {
+      width: 20px;
+      height: 25px;
+    }
+      .menuPath1 {
+        stroke-dasharray: 50;
+        stroke-dashoffset: 50;
+        animation: showMenu 0.8s 2s ease forwards;
+      }
+      .menuPath2 {
+        stroke-dasharray: 50;
+        stroke-dashoffset: 50;
+        animation: showMenu 0.8s 2.1s ease forwards;
+      }
+      .menuPath3 {
+        stroke-dasharray: 50;
+        stroke-dashoffset: 50;
+        animation: showMenu 0.8s 2.2s ease forwards;
+      }
+      .menuPath4 {
+        stroke-dasharray: 50;
+        stroke-dashoffset: 50;
+        animation: showMenu 0.8s 2.3s ease forwards;
+      }
+      @keyframes showMenu {
+        0% {
+          stroke-dashoffset: 50;
+        }
+        100% {
+          stroke-dashoffset: 0;
+        }
+      }
+
+
+
+
+
+
+/*****************************\
+  $SPOTIFY MUSICINFO
+\*****************************/
+.spotify__musicInfo {
+  width: 100%;
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+  .spotify__musicInfo__cover {
+    width: 90%;
+    height: 80%;
+    background-image: url(../img/davidguetta.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 0;
+    margin-top: -30px;
+    animation: showMusicCover 0.3s 0.6s ease forwards;
+  }
+  @keyframes showMusicCover {
+    0% {
+      margin-top: -30px;
+      opacity: 0;
+    }
+    100% {
+      margin-top: 0px;
+      opacity: 1;
+    }
+  }
+  .spotify__musicInfo__detailedControl {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+    .spotify__musicInfo__detailedControl__saveMusicButton {
+      width: 20%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+      .spotify__musicInfo__detailedControl__saveMusicButton__svg {
+        width: 20px;
+        height: 20px;
+      }
+        .saveMusicButtonPath1 {
+          stroke-dasharray: 100;
+          stroke-dashoffset: 100;
+          animation: showSaveMusicButton 1s 1.3s ease forwards;
+        }
+        .saveMusicButtonPath2 {
+          stroke-dasharray: 100;
+          stroke-dashoffset: 100;
+          animation: showSaveMusicButton 1s 1.5s ease forwards;
+        }
+        @keyframes showSaveMusicButton {
+          0% {
+            stroke-dashoffset: 100;
+          }
+          100% {
+            stroke-dashoffset: 0;
+          }
+        }
+    .spotify__musicInfo__detailedControl__musicName {
+      width: 60%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      animation: showMusicName 0.3s 1s ease forwards;
+    }
+    @keyframes showMusicName {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+      .spotify__musicInfo__detailedControl__musicName--name {
+        margin: 0;
+        padding: 0;
+        color: #FFF;
+        font-size: 1em;
+      }
+      .spotify__musicInfo__detailedControl__musicName--player {
+        margin: 0;
+        padding: 0;
+        color: #FFF;
+        font-size: 0.7em;
+        margin-top: 5px;
+      }
+    .spotify__musicInfo__detailedControl__changUIButton {
+      width: 20%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+      .spotify__musicInfo__detailedControl__changUIButton__svg {
+        width: 20px;
+        height: 20px;
+        opacity: 0;
+        animation: showChangeUIButton 0.3s 1.3s ease forwards;
+      }
+      @keyframes showChangeUIButton {
+        0% {
+          opacity: 0;
+        }
+        20% {
+          opacity: 1;
+        }
+        40% {
+          opacity: 0;
+        }
+        60% {
+          opacity: 1;
+        }
+        80% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+
+
+
+
+
+/*****************************\
+  $SPOTIFY CONTROLPANEL
+\*****************************/
+.spotify__controlPanel {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+  .spotify__controlPanel__playingState {
+    width: 90%;
+    height: 2%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+    .spotify__controlPanel__playingState__bar {
+      position: absolute;
+      /*width: 100%;*/
+      width: 0%;
+      height: 100%;
+      background-color: rgba(147, 148, 152, 0.5);
+      animation: showPlayingStateBar 0.3s 4.7s ease forwards;
+    }
+    @keyframes showPlayingStateBar {
+      0% {
+        width: 0%;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+      .spotify__controlPanel__playingState__bar--progress {
+        position: absolute;
+        /*width: 50%;*/
+        width: 0%;
+        height: 100%;
+        background-color: #FFF;
+        animation: showPlayingStateBarProgress 0.3s 5.2s ease forwards;
+      }
+      @keyframes showPlayingStateBarProgress {
+        0% {
+          width: 0%;
+        }
+        100% {
+          width: 50%;
+        }
+      }
+      .spotify__controlPanel__playingState__bar--circle {
+        position: relative;
+        left: 100%;
+        top: -150%;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #FFF;
+        opacity: 0;
+        animation: showPlayingStateBarCircle 0.3s 5s ease forwards;
+      }
+      @keyframes showPlayingStateBarCircle {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+  .spotify__controlPanel__playingController {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+    .spotify__controlPanel__controller {
+      width: 15%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .playTheMusic {
+      width: 20%;
+      height: 100%;
+    }
+      .playTheMusic__stopIcon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid #FFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        transform-origin: center;
+        transform: scale(0);
+        animation: showStopIcon 0.3s 2.8s ease forwards;
+      }
+      @keyframes showStopIcon {
+        0% {
+          transform: scale(0);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+        .stopMusicBar {
+          width: 5px;
+          height: 0px;
+          /*height: 25px;*/
+          background-color: #FFF;
+          border-radius: 2px;
+          animation: showMusicBar 0.3s 3.2s ease forwards;
+        }
+          .stopMusicBar:first-child {
+            position: absolute;
+            left: 32%;
+          }
+          .stopMusicBar:last-child {
+            position: absolute;
+            left: 57%;
+          }
+        @keyframes showMusicBar {
+          0% {
+            height: 0px;
+          }
+          100% {
+            height: 25px;
+          }
+        }
+      .playPreviousMusic__svg,
+      .playNextMusic__svg {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .playMusicRandom__svg,
+      .playMusicRepeat__svg {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+        .mappedLine {
+          transform: rotateX(180deg) translateY(2px);
+          stroke: #fff;
+          transform-origin: center;
+        }
+
+      .playNextMusicPath1,
+      .playPreviousMusicPath1 {
+        stroke-dasharray: 50;
+        stroke-dashoffset: 50;
+        animation: showPlayNextPreviousMusicPath1 0.3s 3.5s ease forwards;
+      }
+      .playNextMusicPath2,
+      .playPreviousMusicPath2 {
+        opacity: 0;
+        animation: showPlayNextPreviousMusicPath2 0.3s 3.8s ease forwards;
+      }
+      @keyframes showPlayNextPreviousMusicPath1 {
+        0% {
+          stroke-dashoffset: 50;
+        }
+        100% {
+          stroke-dashoffset: 0;
+        }
+      }
+      @keyframes showPlayNextPreviousMusicPath2 {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .playMusicArrowLine {
+        stroke-dasharray: 50;
+        stroke-dashoffset: 50;
+        animation: showPlayMusicArrowLine 0.5s 4.2s ease forwards;
+      }
+      @keyframes showPlayMusicArrowLine {
+        0% {
+          stroke-dashoffset: 50;
+        }
+        100% {
+          stroke-dashoffset: 0;
+        }
+      }
+      .playMusicArrow {
+        opacity: 0;
+        animation: showPlayMusicArrow 0.8s 4.6s ease forwards;
+      }
+      @keyframes showPlayMusicArrow {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+.enabled {
+  stroke: rgb(42, 246, 0);
+}
+
+
+
+/*****************************\
+  $SPOTIFY FOOTER
+\*****************************/
+.spotify__footer {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  opacity: 0;
+  animation: showPotifyFooter 0.3s 5.6s ease forwards;
+}
+@keyframes showPotifyFooter {
+  0% {
+    margin-top: 20px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+  .spotify__footer__svg {
+    width: 21px;
+    height: 21px;
+  }
+    .spotify__footer__svg__bigArc {
+
+    }
+    .spotify__footer__svg__midArc {
+      transform: translateX(-1.5px);
+    }
+    .spotify__footer__svg__micro {
+
+    }
+  .spotify__footer__context {
+    color: #FFF;
+    text-align: center;
+    font-size: 0.8em;
+    margin-left: 6px;
+  }

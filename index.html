@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Spotify</title>
+    <link rel="stylesheet" href="app/styles/css/normalize.css"/>
+    <link rel="stylesheet" href="app/styles/css/main.css"/>
+    <link rel="stylesheet" href="app/styles/css/spotify.css"/>
+  </head>
+  <body>
+    <div class="container">
+      <div class="iphone">
+        <div class="iphone--screen">
+          <header class="screen--header">
+            <div class="signal">
+              <span class="signal--power"></span>
+              <span class="signal--power"></span>
+              <span class="signal--power"></span>
+              <span class="signal--power"></span>
+              <span class="signal--power"></span>
+            </div>
+            <div class="serviceProvider">中華電信</div>
+            <div class="signalType">4G</div>
+            <div class="time">
+              <input type="text" class="day" value="上午"/>
+              <input type="text" class="hour" value="9"/>
+              <span>:</span>
+              <input type="text" class="minute"  id="timeMinute" value="38"/>
+            </div>
+            <input type="text" class="powerLeft" value="80%"/>
+            <div class="power">
+              <div class="power--body"></div>
+              <div class="power--head"></div>
+            </div>
+          </header>
+          <!-- instagram view -->
+          <div class="screen--view" id="firstFilm">
+            <div class="spotify">
+              <header class="spotify__header">
+                <div class="spotify__header__dropDownButton">
+                  <svg class="spotify__header__dropDownButton__svg">
+                    <path class="svgPathElement dropDownBottonPath" d="M0 0 L7.5 10 L15 0"></path>
+                  </svg>
+                </div>
+                <div class="spotify__header__player">
+                  <p class="spotify__header__player--name">Now Playing from <br>David Guetta</p>
+                </div>
+                <div class="spotify__header__menu">
+                  <svg class="spotify__header__menu__svg">
+                    <path class="svgPathElement menuPath1" d="M0 0 L7.5 5 L0 10 Z"></path>
+                    <path class="svgPathElement menuPath2" d="M12 5 L20 5"></path>
+                    <path class="svgPathElement menuPath3" d="M0 14 L20 14"></path>
+                    <path class="svgPathElement menuPath4" d="M0 20 L20 20"></path>
+                  </svg>
+                </div>
+              </header>
+              <div class="spotify__musicInfo">
+                <div class="spotify__musicInfo__cover"></div>
+                <div class="spotify__musicInfo__detailedControl">
+                  <div class="spotify__musicInfo__detailedControl__saveMusicButton">
+                    <svg class="spotify__musicInfo__detailedControl__saveMusicButton__svg">
+                      <path class="svgPathElement saveMusicButtonPath1" d="M0 10 L20 10"></path>
+                      <path class="svgPathElement saveMusicButtonPath2" d="M10 0 L10 20"></path>
+                    </svg>
+                  </div>
+                  <div class="spotify__musicInfo__detailedControl__musicName">
+                    <h5 class="spotify__musicInfo__detailedControl__musicName--name">Titanium(feat. Sia)</h5>
+                    <p class="spotify__musicInfo__detailedControl__musicName--player">David Guetta</p>
+                  </div>
+                  <div class="spotify__musicInfo__detailedControl__changUIButton">
+                    <svg class="spotify__musicInfo__detailedControl__changUIButton__svg">
+                      <circle cx="3" cy="8" r="2" fill="#FFF"></circle>
+                      <circle cx="10" cy="8" r="2" fill="#FFF"></circle>
+                      <circle cx="17" cy="8" r="2" fill="#FFF"></circle>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="spotify__controlPanel">
+                <div class="spotify__controlPanel__playingState">
+                  <div class="spotify__controlPanel__playingState__bar">
+                    <div class="spotify__controlPanel__playingState__bar--progress">
+                      <div class="spotify__controlPanel__playingState__bar--circle"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="spotify__controlPanel__playingController">
+                  <div class="spotify__controlPanel__controller playMusicRandom">
+                    <svg class="playMusicRandom__svg">
+                      <path class="svgPathElement fillSvg enabled playMusicArrow" d="M16 1 L19 3 L16 5 Z"></path>
+                      <path class="svgPathElement enabled playMusicArrowLine" d="M16 3 C8 3, 8 20, 0 19"></path>
+                      <path class="svgPathElement fillSvg enabled playMusicArrow" d="M16 19 L19 17 L16 15 Z"></path>
+                      <path class="svgPathElement mappedLine enabled playMusicArrowLine" d="M16 3 C8 3, 8 20, 0 19"></path>
+                    </svg>
+                  </div>
+                  <div class="spotify__controlPanel__controller playPreviousMusic">
+                    <svg class="playPreviousMusic__svg">
+                      <path class="svgPathElement thickenSvg playPreviousMusicPath1" d="M6 0 L6 20"></path>
+                      <path class="svgPathElement fillSvg playPreviousMusicPath2" d="M20 0 L20 20 L7 10 Z"></path>
+                    </svg>
+                  </div>
+                  <div class="spotify__controlPanel__controller playTheMusic">
+                    <div class="playTheMusic__stopIcon">
+                      <span class="stopMusicBar"></span>
+                      <span class="stopMusicBar"></span>
+                    </div>
+                  </div>
+                  <div class="spotify__controlPanel__controller playNextMusic">
+                    <svg class="playNextMusic__svg">
+                      <path class="svgPathElement thickenSvg playNextMusicPath1" d="M14 0 L14 20"></path>
+                      <path class="svgPathElement fillSvg playNextMusicPath2" d="M0 0 L0 20 L13 10 Z"></path>
+                    </svg>
+                  </div>
+                  <div class="spotify__controlPanel__controller playMusicRepeat">
+                    <svg class="playMusicRepeat__svg">
+                      <path class="svgPathElement playMusicArrowLine" d="M0 10 C1 2, 1 2, 15 2"></path>
+                      <path class="svgPathElement fillSvg playMusicArrow" d="M16 0 L19 2 L16 4 Z"></path>
+                      <path class="svgPathElement playMusicArrowLine" d="M19 10 C18 18, 18 18, 4 18"></path>
+                      <path class="svgPathElement fillSvg playMusicArrow" d="M3 16 L0 18 L3 20 Z"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <footer class="spotify__footer">
+                <svg class="spotify__footer__svg">
+                  <path class="svgPathElement fillSvg spotify__footer__svg__micro" d="M11 6 L11 14 L7 11 L4 11 L4 9 L7 9 Z"></path>
+                  <path class="svgPathElement spotify__footer__svg__bigArc" d="M10 1 C-2 1.5, -2 18.5, 10 19"></path>
+                  <path class="svgPathElement spotify__footer__svg__midArc" d="M16 2 C22 6, 22 14, 16 18"></path>
+                  <path class="svgPathElement spotify__footer__svg__smallArc" d="M14 6 C16 7.5, 16 12.5, 14 14"></path>
+                </svg>
+                <div class="spotify__footer__context">available device</div>
+              </footer>
+            </div>
+          </div>
+        </div>
+        <div class="iphone--earphone"></div>
+        <div class="iphone--camera"></div>
+        <div class="iphone--homeButton"></div>
+      </div>
+    </div>
+  </body>
+</html>
